@@ -1,6 +1,6 @@
 "use strict";
 getHeader();
-// getFooter();
+getFooter();
 
 async function getHeader() {
   const getHeader = await fetch("./include/header.html");
