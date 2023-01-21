@@ -35,7 +35,7 @@ img {
 /* ********** メインイメージ ********** */
 .main-image {
   height: 100vh;
-  /* background-image: url(../img/main-image.jpg); */
+  background-image: url(../img/main-image.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -98,9 +98,9 @@ img {
   .main-wrap {
     width: var(--width-sp);
   }
-  /* .main-image {
+  .main-image {
     background-image: url(../img/main-image-sp.jpg);
-  } */
+  }
   .main-image .main-image-text {
     font-size: 2.4rem;
   }
