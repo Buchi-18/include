@@ -1,0 +1,119 @@
+<div class="header-bg"></div>
+<div class="header-wrap">
+  <h1 class="site-title">
+    <a href="index.html">INCLUDE</a>
+  </h1>
+  <nav>
+    <ul id="headerLists">
+      <li><a href="index.html">TOP</a></li>
+      <li><a href="abuot.html">ABOUT</a></li>
+      <li><a href="news.html">NEWS</a></li>
+      <li><a href="article.html">ARTICLE</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="mobileMenu">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<style>
+  .header-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    background-color: rgba(139, 0, 0, 0.9);
+    z-index: 100;
+  }
+  .header-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 200;
+  }
+  .site-title a {
+    color: #fff;
+  }
+  #headerLists {
+    display: flex;
+  }
+  #headerLists li {
+    padding: 0 10px;
+  }
+  #headerLists li a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  #headerLists li a:hover {
+    opacity: 0.7;
+  }
+  #mobileMenu {
+    display: none;
+  }
+  @media screen and (max-width: 960px) {
+  }
+  @media screen and (max-width: 750px) {
+    .header-wrap {
+      display: block;
+      padding: 0 3%;
+    }
+    #headerLists {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      text-align: center;
+      margin-top: 80px;
+      padding: 5%;
+      width: 100vw;
+      height: 0;
+      background-color: rgba(139, 0, 0, 0.9);
+      transform: translateY(calc(- 100vh - 80px));
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    #headerLists.open {
+      height: calc(100vh - 80px);
+      transform: translateY(0);
+      opacity: 1;
+    }
+    #mobileMenu {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      padding: 20px;
+      z-index: 200;
+    }
+    #mobileMenu .bar {
+      display: block;
+      width: 40px;
+      height: 2px;
+      margin-top: 8.5px;
+      background-color: #fff;
+      transition: all 0.3s;
+    }
+    #mobileMenu.open .bar:nth-child(1) {
+      transform: translateY(10px) rotate(405deg);
+    }
+    #mobileMenu.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+    #mobileMenu.open .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-405deg);
+    }
+  }
+</style>
