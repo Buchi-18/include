@@ -1,0 +1,110 @@
+/* ********** メインイメージ ********** */
+:root {
+  --width-pc: calc(860px + 10vw);
+  --width-tb: 80%;
+  --width-sp: 92%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.6;
+}
+button {
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+img {
+  width: 100%;
+}
+/* ********** メインイメージ ********** */
+.main-image {
+  height: 100vh;
+  /* background-image: url(../img/main-image.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+.main-image .main-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ddd;
+  text-shadow: 5px 5px 5px #000;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3rem;
+  white-space: nowrap;
+}
+.author {
+  position: absolute;
+  top: 96vh;
+  right: 3vw;
+}
+.author a {
+  color: #ddd;
+}
+/* ********** メインコンテンツ********** */
+.main-wrap {
+  width: var(--width-pc);
+  padding: 5% 0 0 0;
+  margin: 0 auto 15px;
+}
+.section-title {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px #555;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3rem;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+.section-title a {
+  color: #eee;
+}
+/* ******************** */
+/* タブレット */
+/* ******************** */
+@media screen and (max-width: 960px) {
+  .main-wrap {
+    width: var(--width-tb);
+  }
+}
+/* ******************** */
+/* スマホ */
+/* ******************** */
+@media screen and (max-width: 750px) {
+  .main-wrap {
+    width: var(--width-sp);
+  }
+  /* .main-image {
+    background-image: url(../img/main-image-sp.jpg);
+  } */
+  .main-image .main-image-text {
+    font-size: 2.4rem;
+  }
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
