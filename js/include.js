@@ -1,5 +1,5 @@
 "use strict";
-// getHeader();
+getHeader();
 // getFooter();
 
 async function getHeader() {
