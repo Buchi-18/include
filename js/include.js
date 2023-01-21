@@ -3,7 +3,7 @@ getHeader();
 // getFooter();
 
 async function getHeader() {
-  const getHeader = await fetch("../header.html");
+  const getHeader = await fetch("./include/header.html");
   const data = await getHeader.text();
   document.getElementById("header").innerHTML += data;
 
